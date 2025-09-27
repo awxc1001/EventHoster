@@ -6,7 +6,7 @@ public class DbInitializer
 {
     public static async Task SeedData(AppDbContext context)
     {
-        if (context.Activitiies.Any()) return;
+        if (context.Activities.Any()) return;
 
         var activities = new List<Activity>
         {
@@ -121,7 +121,7 @@ public class DbInitializer
                 Longitude = -0.781404
             }
         };
-        context.Activitiies.AddRange(activities);
+        context.Activities.AddRange(activities);
         await context.SaveChangesAsync();
     }
 }
